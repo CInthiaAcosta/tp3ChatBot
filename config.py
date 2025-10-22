@@ -1,15 +1,21 @@
-from dataclasses import dataclass
-import os
+from dataclasses import dataclass 
+import os 
 from dotenv import load_dotenv
 
 load_dotenv()
 
-@dataclass
+@dataclass(frozen=True)
 class Settings:
     api_key: str = os.getenv("GEMINI_API_KEY")
     model: str = os.getenv("MODEL")
-    maximo_intento: int=int(os.getenv("MAXIMO_INTENTO", 3))
-    tiempo_restante: int=int(os.getenv("TIEMPO_RESTANTE", 30))
-    max_historial: int=int(os.getenv("MAX_HISTORIAL", 12))
+    max_retries: int = int(os.getenv("MAX_RETRIES", 3))
+    timeout_seconds: int = int(os.getenv("TIMEOUT_SECONDS", "30"))
+    max_history: int = int(os.getenv("MAX_HISTORY", "12"))
 
-Settings=Settings()
+Settings = Settings()
+
+
+
+
+
+    
