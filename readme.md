@@ -18,8 +18,8 @@ Este proyecto consiste en un bot creado en Python que emplea la API de Gemini pa
 ## Instalación
 
 ```bash
-git clone https://github.com/tuusuario/ChatBotGemini.git
-cd ChatBotGemini
+git clone https://github.com/CInthiaAcosta/tp3ChatBot.git
+cd tp3ChatBot
 pip install -r requirements.txt
 ```
 
